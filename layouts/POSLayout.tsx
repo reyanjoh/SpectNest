@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import SideNavBar from "@/layouts/layoutComponents/SideNavBar";
 
 type Props = {
@@ -8,10 +8,17 @@ type Props = {
 
 export const POSLayout = ({ children }: Props) => {
   return (
-    <Flex minH="100dvh" bg="#EFEFEF" p={"1rem"} pt={"4rem"}>
+    <Grid
+      minH="100dvh"
+      bg="#EFEFEF"
+      p={"1rem"}
+      pt={"4rem"}
+      templateColumns="4.5rem 1fr"
+      gap={"1"}
+    >
       <SideNavBar />
 
       {children}
-    </Flex>
+    </Grid>
   );
 };
