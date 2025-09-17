@@ -10,11 +10,11 @@ export const POSLayout = ({ children }: Props) => {
   return (
     <Grid
       minH="100dvh"
-      bg="#EFEFEF"
+      bg="bgGray"
       p={"1rem"}
       pt={"4rem"}
       templateColumns="4.5rem 1fr"
-      gap={"1"}
+      gap={"2"}
     >
       <SideNavBar />
 
