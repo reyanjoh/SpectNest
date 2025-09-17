@@ -6,7 +6,15 @@ import { Receipt } from "./Receipt";
 
 export const Cart = () => {
   return (
-    <Card gap={"2"} p="1.5" justifyContent={"space-between"}>
+    <Card
+      gap={"2"}
+      p="1.5"
+      justifyContent={"space-between"}
+      h="fit-content"
+      alignSelf="start"
+      position={"sticky"}
+      top={"4rem"}
+    >
       <Flex flexDirection={"column"} gap={"2"}>
         <Flex flexDirection={"column"} gap={"2"}>
           <Text fontSize={"2xl"} fontWeight={"extrabold"}>
