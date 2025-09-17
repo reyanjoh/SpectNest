@@ -20,25 +20,27 @@ export const ProductCard = ({ product }: Props) => {
           w={"full"}
         />
       </Box>
-      <Flex>
-        <Text fontSize={"lg"}>{product.name}</Text>
-      </Flex>
-      <Flex justifyContent={"space-between"}>
-        <Text fontSize={"lg"} fontWeight={"semibold"}>
-          ₱{product.price}
+      <Flex flexDirection={"column"} gap={"1"}>
+        <Text fontSize={"lg"} lineClamp={2} h={"3.5rem"}>
+          {product.name}
         </Text>
-        <Button
-          size={"xs"}
-          w={"auto"}
-          p={0}
-          m={0}
-          bg={"black"}
-          borderRadius={"full"}
+        <Flex justifyContent={"space-between"}>
+          <Text fontSize={"lg"} fontWeight={"semibold"}>
+            ₱{product.price}
+          </Text>
+          <Button
+            size={"xs"}
+            w={"auto"}
+            p={0}
+            m={0}
+            bg={"black"}
+            borderRadius={"full"}
 
-          //   onClick={() => setQuantity(quantity + 1)}
-        >
-          <PlusIcon />
-        </Button>
+            //   onClick={() => setQuantity(quantity + 1)}
+          >
+            <PlusIcon />
+          </Button>
+        </Flex>
       </Flex>
     </Card>
   );
