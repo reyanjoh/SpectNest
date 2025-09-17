@@ -1,5 +1,3 @@
 export const colors = {
-  brand: {
-    "500": { value: "red" },
-  },
+  brand: { value: "#4D00F1" },
 };

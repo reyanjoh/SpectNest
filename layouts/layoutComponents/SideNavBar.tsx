@@ -25,12 +25,13 @@ export const SideNavBar = () => {
     <Flex
       minH="100%"
       bg="white"
-      w="20"
+      // w="20"
       flexDir="column"
       alignItems="center"
       justifyContent="space-between"
       borderRadius={"full"}
-      p={"1.5rem"}
+      py={"1.5"}
+      px={"1rem"}
     >
       <Flex
         flexDir="column"
