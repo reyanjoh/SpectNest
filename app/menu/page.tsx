@@ -10,7 +10,6 @@ const Page = async () => {
   const supabase = createClient();
 
   const { data } = await supabase.from("products").select("*");
-  console.log(data);
 
   return (
     <POSLayout>
@@ -19,7 +18,7 @@ const Page = async () => {
           <ProductsHeader />
 
           <Grid
-            templateColumns="repeat(auto-fill, minmax(18rem, 1fr))"
+            templateColumns={"repeat(auto-fill, minmax(18rem, 1fr))"}
             gap={1.5}
           >
             {data?.map((product) => (

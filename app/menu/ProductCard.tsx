@@ -1,14 +1,17 @@
+"use client";
 import { Card } from "@/components/Card";
 import React from "react";
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import { PlusIcon } from "@/components/icons/PlusIcon";
-import { ProductType } from "../types/ProductType";
+import { ProductType } from "../../types/ProductType";
+import { useCartStore } from "../../store/menu/cartStore";
 
 type Props = {
   product: ProductType;
 };
 
 export const ProductCard = ({ product }: Props) => {
+  const addProduct = useCartStore((state) => state.addProduct);
   return (
     <Card minH={"20rem"} borderRadius={"xl"}>
       <Box overflow={"hidden"} h={"15rem"} w={"full"} borderRadius={"lg"}>
@@ -35,8 +38,9 @@ export const ProductCard = ({ product }: Props) => {
             m={0}
             bg={"black"}
             borderRadius={"full"}
-
-            //   onClick={() => setQuantity(quantity + 1)}
+            onClick={() => {
+              addProduct(product);
+            }}
           >
             <PlusIcon />
           </Button>

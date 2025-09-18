@@ -1,10 +1,14 @@
+"use client";
+
 import { Card } from "@/components/Card";
 import { Flex, Text, Image, Box, Button } from "@chakra-ui/react";
 import React from "react";
 import { OrderDetails } from "./OrderDetails";
 import { Receipt } from "./Receipt";
+import { useCartStore } from "../../store/menu/cartStore";
 
 export const Cart = () => {
+  const cart = useCartStore((state) => state.cart);
   return (
     <Card
       gap={"2"}
@@ -35,9 +39,13 @@ export const Cart = () => {
           </Flex>
         </Flex>
         <Flex flexDirection={"column"} gap={"1.5"}>
-          <OrderDetails />
-          <OrderDetails />
-          <OrderDetails />
+          {cart.map((product) => (
+            <OrderDetails
+              key={product.product.id}
+              product={product.product}
+              quantity={product.quantity}
+            />
+          ))}
         </Flex>
       </Flex>
 

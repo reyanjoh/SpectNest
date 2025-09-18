@@ -3,29 +3,36 @@
 import { MinusIcon } from "@/components/icons/MinusIcon";
 import { PlusIcon } from "@/components/icons/PlusIcon";
 import { Box, Grid, Flex, Text, Image, Button, Input } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
+import { ProductType } from "../../types/ProductType";
+import { useCartStore } from "../../store/menu/cartStore";
 
-export const OrderDetails = () => {
-  const [quantity, setQuantity] = useState(1);
+type Props = { product: ProductType; quantity: number };
+
+export const OrderDetails = ({ product, quantity }: Props) => {
+  const addProduct = useCartStore((state) => state.addProduct);
+  const removeProduct = useCartStore((state) => state.removeProduct);
+  const inputQuantity = useCartStore((state) => state.inputQuantity);
 
   return (
-    <Grid templateColumns="4rem 1fr" gap={"1"}>
-      <Box overflow={"hidden"} h={"full"} w={"full"} borderRadius={"md"}>
+    <Grid templateColumns="5rem 1fr" gap={"1"}>
+      <Flex overflow={"hidden"} h={"5rem"} w={"5rem"} borderRadius={"md"}>
         <Image
-          src="/images/blankProfile.webp"
+          src={product.imageUrl}
           alt="Blank Image"
           objectFit={"cover"}
           objectPosition={"center"}
           h={"full"}
+          w={"full"}
         />
-      </Box>
+      </Flex>
       <Flex flexDir={"column"} gap={"1"}>
         <Text fontSize={"md"} lineClamp={1}>
-          Product Name Product Name Product Name Product Name
+          {product.name}
         </Text>
         <Flex gap={"1"} justifyContent={"space-between"}>
           <Text fontSize={"lg"} fontWeight={"semibold"}>
-            ₱10.00
+            ₱{product.price * quantity}
           </Text>
           <Flex gap={".5"} alignItems={"center"}>
             <Button
@@ -35,7 +42,7 @@ export const OrderDetails = () => {
               m={0}
               bg={"black"}
               borderRadius={"full"}
-              onClick={() => setQuantity(quantity - 1)}
+              onClick={() => removeProduct(product)}
             >
               <MinusIcon />
             </Button>
@@ -50,7 +57,9 @@ export const OrderDetails = () => {
               p={0}
               border={"none"}
               textAlign={"center"}
-              onChange={(e) => setQuantity(Number(e.target.value))}
+              onChange={(e) => {
+                inputQuantity(product, Number(e.target.value));
+              }}
             />
             <Button
               size={"2xs"}
@@ -59,7 +68,7 @@ export const OrderDetails = () => {
               m={0}
               bg={"black"}
               borderRadius={"full"}
-              onClick={() => setQuantity(quantity + 1)}
+              onClick={() => addProduct(product)}
             >
               <PlusIcon />
             </Button>
