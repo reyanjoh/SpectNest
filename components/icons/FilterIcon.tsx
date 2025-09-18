@@ -1,0 +1,75 @@
+import React from "react";
+
+type Props = {
+  color?: string;
+  height?: string;
+  width?: string;
+  className?: string;
+};
+
+export const FilterIcon = ({
+  color = "black",
+  height = "28",
+  width = "28",
+  className,
+}: Props) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 25 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M22.0156 6.5H16.0156"
+        stroke={color}
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M6.01562 6.5H2.01562"
+        stroke={color}
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M10.0156 10C11.9486 10 13.5156 8.433 13.5156 6.5C13.5156 4.567 11.9486 3 10.0156 3C8.08263 3 6.51562 4.567 6.51562 6.5C6.51562 8.433 8.08263 10 10.0156 10Z"
+        stroke={color}
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M22.0156 17.5H18.0156"
+        stroke={color}
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8.01562 17.5H2.01562"
+        stroke={color}
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M14.0156 21C15.9486 21 17.5156 19.433 17.5156 17.5C17.5156 15.567 15.9486 14 14.0156 14C12.0826 14 10.5156 15.567 10.5156 17.5C10.5156 19.433 12.0826 21 14.0156 21Z"
+        stroke={color}
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
