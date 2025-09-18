@@ -2,7 +2,7 @@
 
 import { MinusIcon } from "@/components/icons/MinusIcon";
 import { PlusIcon } from "@/components/icons/PlusIcon";
-import { Box, Grid, Flex, Text, Image, Button, Input } from "@chakra-ui/react";
+import { Grid, Flex, Text, Image, Button, Input } from "@chakra-ui/react";
 import React from "react";
 import { ProductType } from "../../types/ProductType";
 import { useCartStore } from "../../store/menu/cartStore";
@@ -32,7 +32,7 @@ export const OrderDetails = ({ product, quantity }: Props) => {
         </Text>
         <Flex gap={"1"} justifyContent={"space-between"}>
           <Text fontSize={"lg"} fontWeight={"semibold"}>
-            ₱{product.price * quantity}
+            {/* ₱{product.price * quantity} */}₱{product.price}
           </Text>
           <Flex gap={".5"} alignItems={"center"}>
             <Button

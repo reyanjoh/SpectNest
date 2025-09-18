@@ -9,6 +9,11 @@ import { useCartStore } from "../../store/menu/cartStore";
 
 export const Cart = () => {
   const cart = useCartStore((state) => state.cart);
+  const updateReceipt = useCartStore((state) => state.updateReceipt);
+  React.useEffect(() => {
+    updateReceipt();
+  }, [cart, updateReceipt]);
+
   return (
     <Card
       gap={"2"}

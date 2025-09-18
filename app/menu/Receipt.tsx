@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card } from "@/components/Card";
 import { Flex, Text } from "@chakra-ui/react";
+import { useCartStore } from "../../store/menu/cartStore";
 
 export const Receipt = () => {
+  const receipt = useCartStore((state) => state.receipt);
+
   return (
     <Card bg="gray.100" gap=".5">
       <Flex justifyContent={"space-between"}>
         <Text fontSize={"lg"}>Subtotal</Text>
-        <Text fontSize={"lg"}>₱10.00</Text>
+        <Text fontSize={"lg"}>₱{receipt.subtotal}</Text>
       </Flex>
       <Flex justifyContent={"space-between"} pb={"1"}>
         <Text fontSize={"lg"}>Discount</Text>
-        <Text fontSize={"lg"}>₱00.00</Text>
+        <Text fontSize={"lg"}>₱{receipt.discount}</Text>
       </Flex>
 
       <Flex
@@ -45,7 +48,7 @@ export const Receipt = () => {
           Total
         </Text>
         <Text fontSize={"lg"} fontWeight={"semibold"}>
-          ₱10.00
+          ₱{receipt.total}
         </Text>
       </Flex>
     </Card>
