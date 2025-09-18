@@ -4,8 +4,8 @@ import { MinusIcon } from "@/components/icons/MinusIcon";
 import { PlusIcon } from "@/components/icons/PlusIcon";
 import { Grid, Flex, Text, Image, Button, Input } from "@chakra-ui/react";
 import React from "react";
-import { ProductType } from "../../types/ProductType";
-import { useCartStore } from "../../store/menu/cartStore";
+import { ProductType } from "../../../types/ProductType";
+import { useCartStore } from "../../../store/menu/cartStore";
 
 type Props = { product: ProductType; quantity: number };
 

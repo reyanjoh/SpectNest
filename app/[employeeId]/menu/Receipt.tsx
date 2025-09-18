@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Card } from "@/components/Card";
 import { Flex, Text } from "@chakra-ui/react";
-import { useCartStore } from "../../store/menu/cartStore";
+import { useCartStore } from "../../../store/menu/cartStore";
 
 export const Receipt = () => {
   const receipt = useCartStore((state) => state.receipt);

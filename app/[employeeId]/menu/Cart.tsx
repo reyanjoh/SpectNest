@@ -5,7 +5,7 @@ import { Flex, Text, Image, Box, Button } from "@chakra-ui/react";
 import React from "react";
 import { OrderDetails } from "./OrderDetails";
 import { Receipt } from "./Receipt";
-import { useCartStore } from "../../store/menu/cartStore";
+import { useCartStore } from "../../../store/menu/cartStore";
 
 export const Cart = () => {
   const cart = useCartStore((state) => state.cart);

@@ -3,8 +3,8 @@ import { Card } from "@/components/Card";
 import React from "react";
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import { PlusIcon } from "@/components/icons/PlusIcon";
-import { ProductType } from "../../types/ProductType";
-import { useCartStore } from "../../store/menu/cartStore";
+import { ProductType } from "../../../types/ProductType";
+import { useCartStore } from "../../../store/menu/cartStore";
 
 type Props = {
   product: ProductType;
