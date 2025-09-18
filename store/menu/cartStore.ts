@@ -10,6 +10,12 @@ type State = {
   addProduct: (product: ProductType) => void;
   removeProduct: (product: ProductType) => void;
   inputQuantity: (product: ProductType, quantity: number) => void;
+  receipt: {
+    subtotal: number;
+    discount: number;
+    total: number;
+  };
+  updateReceipt: () => void;
 };
 
 export const useCartStore = create<State>()(
@@ -50,6 +56,21 @@ export const useCartStore = create<State>()(
         if (item?.quantity === undefined) return;
         state.cart.find((item) => item.product.id === product.id)!.quantity =
           quantity;
+      });
+    },
+    receipt: {
+      subtotal: 0.0,
+      discount: 0.0,
+      total: 0.0,
+    },
+    updateReceipt: () => {
+      set((state: State) => {
+        state.receipt.subtotal = state.cart.reduce(
+          (acc, item) => acc + item.product.price * item.quantity,
+          0
+        );
+        state.receipt.discount = 0.0;
+        state.receipt.total = state.receipt.subtotal - state.receipt.discount;
       });
     },
   }))
