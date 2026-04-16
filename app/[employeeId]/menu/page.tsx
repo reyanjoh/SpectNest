@@ -1,10 +1,11 @@
 import { POSLayout } from "@/layouts/POSLayout";
 import React from "react";
 import { Flex, Grid } from "@chakra-ui/react";
-import { Cart } from "./Cart";
+
 import { ProductsHeader } from "./ProductsHeader";
 import { ProductCard } from "./ProductCard";
 import { products } from "@/@temp/products";
+import { Cart } from "@/components/Cart";
 
 const Page = async () => {
   return (

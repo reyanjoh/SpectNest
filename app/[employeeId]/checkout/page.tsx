@@ -7,7 +7,7 @@ import {
   Grid,
   Text,
 } from "@chakra-ui/react";
-import { Cart } from "../menu/Cart";
+import { Cart } from "@/components/Cart";
 import { BiArrowBack } from "react-icons/bi";
 import { useRouter } from "next/navigation";
 import { useCartStore } from "../../../store/menu/cartStore";
