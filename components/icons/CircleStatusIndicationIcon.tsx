@@ -22,7 +22,7 @@ export const CircleStatusIndicationIcon = ({
       border={"3px solid"}
       borderColor={active ? color : "gray.300"}
       borderRadius={"full"}
-      p={0.5}
+      p={0.8}
     >
       <Box
         bg={active ? color : "transparent"}
