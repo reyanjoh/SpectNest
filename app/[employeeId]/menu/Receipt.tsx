@@ -10,11 +10,11 @@ export const Receipt = () => {
     <Card bg="gray.100" gap=".5">
       <Flex justifyContent={"space-between"}>
         <Text fontSize={"lg"}>Subtotal</Text>
-        <Text fontSize={"lg"}>₱{receipt.subtotal}</Text>
+        <Text fontSize={"lg"}>₱{receipt.subtotal.toLocaleString()}</Text>
       </Flex>
       <Flex justifyContent={"space-between"} pb={"1"}>
         <Text fontSize={"lg"}>Discount</Text>
-        <Text fontSize={"lg"}>₱{receipt.discount}</Text>
+        <Text fontSize={"lg"}>₱{receipt.discount.toLocaleString()}</Text>
       </Flex>
 
       <Flex
@@ -48,7 +48,7 @@ export const Receipt = () => {
           Total
         </Text>
         <Text fontSize={"lg"} fontWeight={"semibold"}>
-          ₱{receipt.total}
+          ₱{receipt.total.toLocaleString()}
         </Text>
       </Flex>
     </Card>

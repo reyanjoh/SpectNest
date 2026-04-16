@@ -29,7 +29,7 @@ export const ProductCard = ({ product }: Props) => {
         </Text>
         <Flex justifyContent={"space-between"}>
           <Text fontSize={"lg"} fontWeight={"semibold"}>
-            ₱{product.price}
+            ₱{product.price.toLocaleString()}
           </Text>
           <Button
             size={"xs"}
