@@ -3,9 +3,10 @@
 import { Card } from "@/components/Card";
 import { Flex, Text, Image, Box, Button } from "@chakra-ui/react";
 import React from "react";
-import { OrderDetails } from "./OrderDetails";
-import { Receipt } from "./Receipt";
-import { useCartStore } from "../../../store/menu/cartStore";
+import { OrderDetails } from "../app/[employeeId]/menu/OrderDetails";
+import { Receipt } from "../app/[employeeId]/menu/Receipt";
+import { useCartStore } from "../store/menu/cartStore";
+import { usePathname } from "next/navigation";
 
 export const Cart = () => {
   const cart = useCartStore((state) => state.cart);
@@ -13,6 +14,8 @@ export const Cart = () => {
   React.useEffect(() => {
     updateReceipt();
   }, [cart, updateReceipt]);
+
+  const pathName = usePathname();
 
   return (
     <Card
@@ -56,20 +59,35 @@ export const Cart = () => {
 
       <Flex flexDirection={"column"} gap={"1.5"}>
         <Receipt />
-
-        <Button
-          size={"lg"}
-          w={"full"}
-          bg={"brand"}
-          color={"white"}
-          // fontWeight={"semibold"}
-          fontSize={"lg"}
-          borderRadius={"full"}
-          _hover={{ bg: "#4D00F1" }}
-          _active={{ bg: "#4D00F1" }}
-        >
-          Continue
-        </Button>
+        {pathName.endsWith("menu") ? (
+          <Button
+            size={"lg"}
+            w={"full"}
+            bg={"brand"}
+            color={"white"}
+            // fontWeight={"semibold"}
+            fontSize={"lg"}
+            borderRadius={"full"}
+            _hover={{ bg: "#4D00F1" }}
+            _active={{ bg: "#4D00F1" }}
+          >
+            Checkout
+          </Button>
+        ) : pathName.endsWith("checkout") ? (
+          <Button
+            size={"lg"}
+            w={"full"}
+            bg={"brand"}
+            color={"white"}
+            // fontWeight={"semibold"}
+            fontSize={"lg"}
+            borderRadius={"full"}
+            _hover={{ bg: "#4D00F1" }}
+            _active={{ bg: "#4D00F1" }}
+          >
+            Place Order
+          </Button>
+        ) : null}
       </Flex>
     </Card>
   );
