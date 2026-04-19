@@ -12,6 +12,7 @@ import { BiArrowBack } from "react-icons/bi";
 import { useRouter } from "next/navigation";
 import { useCartStore } from "../../../store/menu/cartStore";
 import { PaymentMethodCards } from "@/components/icons/PaymentMethodCards";
+import { Cash } from "./Cash";
 
 const paymentMethod = ["Cash", "G-cash", "Split"] as const;
 type PaymentMethodProps = (typeof paymentMethod)[number];
@@ -32,7 +33,7 @@ const Page = () => {
   return (
     <POSLayout>
       <Grid minH="100%" minW="100%" templateColumns="1fr 25rem" gap="2">
-        <Flex flexDirection="column" gap={2} minW={0} pt={"1"}>
+        <Flex flexDirection="column" gap={1} minW={0} pt={"1"}>
           <Flex gap={"1"} alignItems={"center"}>
             <BiArrowBack
               size={30}
@@ -46,14 +47,12 @@ const Page = () => {
               Back
             </Text>
           </Flex>
-
-          <Flex flexDirection={"column"} gap={"1"} pt={"1"} pb={"3"}>
+          <Flex flexDirection={"column"} gap={"1"} pb={"1"}>
             <Text fontSize={"4xl"} fontWeight={"extrabold"}>
               Payment Methods
             </Text>
             <Text fontSize={"xl"}>Choose Payment Method</Text>
           </Flex>
-
           <Grid
             templateColumns={"repeat(auto-fill, minmax(18rem, 1fr))"}
             gap={1.5}
@@ -67,23 +66,7 @@ const Page = () => {
               />
             ))}
           </Grid>
-          {/* <Flex>
-            <Button
-              size={"lg"}
-              w={"auto"}
-              bg={"brand"}
-              px={"10rem"}
-              py={"1ren"}
-              color={"white"}
-              // fontWeight={"semibold"}
-              fontSize={"lg"}
-              borderRadius={"full"}
-              _hover={{ bg: "#4D00F1" }}
-              _active={{ bg: "#4D00F1" }}
-            >
-              Continue
-            </Button>
-          </Flex> */}
+          <Cash />
         </Flex>
         <Cart />
       </Grid>
