@@ -33,7 +33,7 @@ const Page = () => {
   return (
     <POSLayout>
       <Grid minH="100%" minW="100%" templateColumns="1fr 25rem" gap="2">
-        <Flex flexDirection="column" gap={1} minW={0} pt={"1"}>
+        <Flex flexDirection="column" gap={1} minW={0}>
           <Flex gap={"1"} alignItems={"center"}>
             <BiArrowBack
               size={30}
@@ -47,7 +47,7 @@ const Page = () => {
               Back
             </Text>
           </Flex>
-          <Flex flexDirection={"column"} gap={"1"} pb={"1"}>
+          <Flex flexDirection={"column"} gap={"1"}>
             <Text fontSize={"4xl"} fontWeight={"extrabold"}>
               Payment Methods
             </Text>
@@ -66,7 +66,7 @@ const Page = () => {
               />
             ))}
           </Grid>
-          <Cash />
+          {selectedPaymentMethod === "Cash" && <Cash />}
         </Flex>
         <Cart />
       </Grid>

@@ -6,16 +6,20 @@ import React from "react";
 import { OrderDetails } from "../app/[employeeId]/menu/OrderDetails";
 import { Receipt } from "../app/[employeeId]/menu/Receipt";
 import { useCartStore } from "../store/menu/cartStore";
-import { usePathname } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export const Cart = () => {
+  const router = useRouter();
+  const pathName = usePathname();
+  const params = useParams();
   const cart = useCartStore((state) => state.cart);
   const updateReceipt = useCartStore((state) => state.updateReceipt);
   React.useEffect(() => {
     updateReceipt();
   }, [cart, updateReceipt]);
 
-  const pathName = usePathname();
+  const receipt = useCartStore((state) => state.receipt);
 
   return (
     <Card
@@ -70,6 +74,10 @@ export const Cart = () => {
             borderRadius={"full"}
             _hover={{ bg: "#4D00F1" }}
             _active={{ bg: "#4D00F1" }}
+            onClick={() => {
+              if (receipt.total <= 0) return;
+              router.push(`/${params.employeeId}/checkout`);
+            }}
           >
             Checkout
           </Button>
