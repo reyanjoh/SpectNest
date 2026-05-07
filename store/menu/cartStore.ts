@@ -73,6 +73,7 @@ export const useCartStore = create<State>()(
         );
         state.receipt.discount = 0.0;
         state.receipt.total = state.receipt.subtotal - state.receipt.discount;
+        state.change = -Math.abs(state.receipt.total);
       });
     },
     change: 0.0,
