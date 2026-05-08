@@ -24,6 +24,7 @@ export const Cart = () => {
   const params = useParams();
 
   const cart = useCartStore((state) => state.cart);
+  const resetStore = useCartStore((state) => state.resetStore);
   const receipt = useCartStore((state) => state.receipt);
   const change = useCartStore((state) => state.change);
   const updateReceipt = useCartStore((state) => state.updateReceipt);
@@ -195,6 +196,11 @@ export const Cart = () => {
                         borderRadius={"full"}
                         _hover={{ bg: "#4D00F1" }}
                         _active={{ bg: "#4D00F1" }}
+                        onClick={() => {
+                          setOpen(false);
+                          resetStore();
+                          router.push(`/${params.employeeId}/menu`);
+                        }}
                       >
                         Close
                       </Button>

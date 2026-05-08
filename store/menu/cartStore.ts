@@ -7,6 +7,7 @@ type State = {
     product: ProductType;
     quantity: number;
   }[];
+  resetStore: () => void;
   addProduct: (product: ProductType) => void;
   removeProduct: (product: ProductType) => void;
   inputQuantity: (product: ProductType, quantity: number) => void;
@@ -23,6 +24,17 @@ type State = {
 export const useCartStore = create<State>()(
   immer((set) => ({
     cart: [],
+    resetStore: () => {
+      set((state: State) => {
+        state.cart = [];
+        state.receipt = {
+          subtotal: 0.0,
+          discount: 0.0,
+          total: 0.0,
+        };
+        state.change = 0.0;
+      });
+    },
     addProduct: (product: ProductType) => {
       set((state: State) => {
         if (state.cart.find((item) => item.product.id === product.id)) {
