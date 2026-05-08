@@ -1,5 +1,13 @@
+"use client";
+
+import { useEffect } from "react";
 import { Flex } from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  return <Flex>123</Flex>;
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/123/menu");
+  }, []);
+  return <Flex></Flex>;
 }

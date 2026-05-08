@@ -14,6 +14,7 @@ import { ChatIcon } from "@/components/icons/ChatIcon";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { usePathname } from "next/navigation";
+import { useCartStore } from "@/store/menu/cartStore";
 
 export const SideNavBar = () => {
   const [active, setActive] = useState<boolean>(false);
@@ -22,6 +23,9 @@ export const SideNavBar = () => {
   const pathname = usePathname();
 
   const sideNav = getSideNav(params.employeeId as string);
+
+  const { total } = useCartStore((state) => state.receipt);
+  console.log(total);
 
   return (
     <Flex
@@ -66,7 +70,22 @@ export const SideNavBar = () => {
                   <TagsIcon active={pathname === item.path} />
                 </Link>
               ) : item.icon === "CartIcon" ? (
-                <Link href={item.path}>
+                <Link
+                  href={item.path}
+                  onClick={(e) => {
+                    if (total === 0) {
+                      e.preventDefault();
+                    }
+                  }}
+                  style={
+                    total === 0
+                      ? {
+                          color: "gray",
+                          cursor: "not-allowed",
+                        }
+                      : {}
+                  }
+                >
                   <CartIcon active={pathname === item.path} />
                 </Link>
               ) : item.icon === "ChatIcon" ? (

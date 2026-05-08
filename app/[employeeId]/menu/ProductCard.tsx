@@ -21,15 +21,20 @@ export const ProductCard = ({ product }: Props) => {
           objectFit={"cover"}
           objectPosition={"center"}
           w={"full"}
+          transition={".2s"}
+          _hover={{
+            scale: 1.03,
+          }}
         />
       </Box>
       <Flex flexDirection={"column"} gap={"1"}>
-        <Text fontSize={"lg"} lineClamp={2} h={"3.5rem"}>
-          {product.name}
-        </Text>
+        <Flex flexDirection={"column"}>
+          <Text fontSize={"lg"}>{product.name}</Text>
+          <Text fontSize={"sm"}>Size: 6&apos;</Text>
+        </Flex>
         <Flex justifyContent={"space-between"}>
           <Text fontSize={"lg"} fontWeight={"semibold"}>
-            ₱{product.price}
+            ₱{product.price.toLocaleString()}
           </Text>
           <Button
             size={"xs"}
