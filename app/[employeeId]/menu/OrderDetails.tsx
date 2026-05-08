@@ -32,7 +32,7 @@ export const OrderDetails = ({ product, quantity }: Props) => {
         </Text>
         <Flex gap={"1"} justifyContent={"space-between"}>
           <Text fontSize={"lg"} fontWeight={"semibold"}>
-            {/* ₱{product.price * quantity} */}₱{product.price}
+            {/* ₱{product.price * quantity} */}₱{product.price.toLocaleString()}
           </Text>
           <Flex gap={".5"} alignItems={"center"}>
             <Button

@@ -16,6 +16,8 @@ type State = {
     total: number;
   };
   updateReceipt: () => void;
+  change: number;
+  updateChange: (amountTendered: number) => void;
 };
 
 export const useCartStore = create<State>()(
@@ -42,7 +44,7 @@ export const useCartStore = create<State>()(
         }
         if (item?.quantity === 1) {
           state.cart = state.cart.filter(
-            (item) => item.product.id !== product.id
+            (item) => item.product.id !== product.id,
           );
           return;
         }
@@ -67,11 +69,18 @@ export const useCartStore = create<State>()(
       set((state: State) => {
         state.receipt.subtotal = state.cart.reduce(
           (acc, item) => acc + item.product.price * item.quantity,
-          0
+          0,
         );
         state.receipt.discount = 0.0;
         state.receipt.total = state.receipt.subtotal - state.receipt.discount;
+        state.change = -Math.abs(state.receipt.total);
       });
     },
-  }))
+    change: 0.0,
+    updateChange: (amountTendered: number) => {
+      set((state: State) => {
+        state.change = amountTendered - state.receipt.total;
+      });
+    },
+  })),
 );
