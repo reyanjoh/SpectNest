@@ -16,6 +16,7 @@ import { Receipt } from "../app/[employeeId]/menu/Receipt";
 import { useCartStore } from "../store/menu/cartStore";
 import { usePathname, useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { CheckIcon } from "./icons/CheckIcon";
 
 export const Cart = () => {
   const router = useRouter();
@@ -127,13 +128,24 @@ export const Cart = () => {
                     flexDirection={"column"}
                     justifyContent={"center"}
                     alignContent={"center"}
+                    gap={1}
                   >
-                    <Dialog.Title textAlign={"center"}>
-                      Transaction Success!
-                    </Dialog.Title>
+                    <Flex justifyContent={"center"} alignContent={"center"}>
+                      <CheckIcon width="100" height="100" />
+                    </Flex>
+                    <Flex
+                      flexDirection={"column"}
+                      justifyContent={"center"}
+                      alignContent={"center"}
+                    >
+                      <Dialog.Title textAlign={"center"}>
+                        Transaction Success!
+                      </Dialog.Title>
+                      <Text textAlign={"center"}>Confirm Order</Text>
+                    </Flex>
                   </Dialog.Header>
                   <Dialog.Body
-                    // p={1}
+                    p={1}
                     // pt={"5"}
                     display={"flex"}
                     flexDirection={"column"}
@@ -141,7 +153,35 @@ export const Cart = () => {
                     justifyContent={"center"}
                     alignContent={"center"}
                   >
-                    <Text textAlign={"center"}>Confirm Order</Text>
+                    <Flex
+                      border={"1px solid"}
+                      borderColor={"gray.200"}
+                      borderRadius={10}
+                      flexDir={"column"}
+                    >
+                      <Flex
+                        p={"1rem"}
+                        pb={"0.5rem"}
+                        borderBottom={"1px solid"}
+                        borderColor={"gray.200"}
+                      >
+                        <Text fontWeight={"semibold"}>Order Summary</Text>
+                      </Flex>
+                      <Flex p={1} flexDirection={"column"} gap={".5rem"}>
+                        <Flex justifyContent={"space-between"}>
+                          <Text>Order ID</Text>
+                          <Text>3213161545424541815435</Text>
+                        </Flex>
+                        <Flex justifyContent={"space-between"}>
+                          <Text>Date</Text>
+                          <Text>{new Date().toLocaleDateString()}</Text>
+                        </Flex>
+                        <Flex justifyContent={"space-between"}>
+                          <Text>Subtotal</Text>
+                          <Text>${receipt.subtotal.toFixed(2)}</Text>
+                        </Flex>
+                      </Flex>
+                    </Flex>
                   </Dialog.Body>
                   <Dialog.Footer p={1} justifyContent={"center"}>
                     <Dialog.ActionTrigger asChild>
