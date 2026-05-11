@@ -1,23 +1,23 @@
 export function getSideNav(employeeId: string) {
   return [
-    // {
-    //   id: 1,
-    //   name: "Home",
-    //   path: `/${employeeId}/home`,
-    //   icon: "HomeIcon",
-    // },
+    {
+      id: 1,
+      name: "Home",
+      path: `/${employeeId}/home`,
+      icon: "HomeIcon",
+    },
     {
       id: 2,
       name: "Menu",
       path: `/${employeeId}/menu`,
       icon: "MenuIcon",
     },
-    // {
-    //   id: 3,
-    //   name: "Saved Items",
-    //   path: `/${employeeId}/saved-items`,
-    //   icon: "TagsIcon",
-    // },
+    {
+      id: 3,
+      name: "Saved Items",
+      path: `/${employeeId}/saved-items`,
+      icon: "TagsIcon",
+    },
     {
       id: 4,
       name: "Checkout",
@@ -30,5 +30,11 @@ export function getSideNav(employeeId: string) {
     //   path: `/${employeeId}/chat`,
     //   icon: "ChatIcon",
     // },
+    {
+      id: 6,
+      name: "Inventory",
+      path: `/${employeeId}/inventory`,
+      icon: "InventoryIcon",
+    },
   ];
 }
