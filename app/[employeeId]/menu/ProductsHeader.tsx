@@ -9,7 +9,7 @@ export const ProductsHeader = () => {
     <Flex
       flexDirection={"column"}
       gap={"1"}
-      py={"1"}
+      // py={"1"}
       position={"sticky"}
       top={"-3rem"}
       bg={"bgGray"}
