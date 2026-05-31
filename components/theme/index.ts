@@ -6,6 +6,10 @@ import { recipes } from "./recipes";
 const config = defineConfig({
   theme: {
     tokens: {
+      fonts: {
+        body: { value: "'Inter', system-ui, sans-serif" },
+        heading: { value: "'Inter', system-ui, sans-serif" },
+      },
       colors: colors,
       spacing: spacing,
     },
