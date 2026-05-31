@@ -9,7 +9,6 @@ export const ProductsHeader = () => {
     <Flex
       flexDirection={"column"}
       gap={"1"}
-      // py={"1"}
       position={"sticky"}
       top={"-3rem"}
       bg={"bgGray"}
@@ -21,8 +20,6 @@ export const ProductsHeader = () => {
       <Flex
         justifyContent={"space-between"}
         alignItems={"center"}
-        // bg={"red.100"}
-        // p={"1"}
         borderRadius={"lg"}
       >
         <Text fontSize={"2xl"} fontWeight={"extrabold"}>
