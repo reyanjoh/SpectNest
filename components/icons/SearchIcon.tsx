@@ -8,7 +8,7 @@ type Props = {
 };
 
 export const SearchIcon = ({
-  color = "black",
+  color = "#D0D5DD",
   height = "23",
   width = "23",
   className,
