@@ -97,7 +97,7 @@ export default function POSLoginPage() {
               mt={1}
               bg="brand"
               color="white"
-              onClick={() => router.push("/employee/1/inventory")}
+              onClick={() => router.push("/1123/menu")}
             >
               Sign in
             </Button>
