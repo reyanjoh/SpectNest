@@ -10,5 +10,6 @@ export const colors = {
   bgGray: { value: "#EFEFEF" },
   fontGray: {
     1: { value: "#667085" },
+    2: { value: "#858D9D" },
   },
 };
