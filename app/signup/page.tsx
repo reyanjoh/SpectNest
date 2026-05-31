@@ -1,22 +1,7 @@
 "use client";
 
 import { Logo } from "@/components/icons/Logo";
-import {
-  Box,
-  Button,
-  Checkbox,
-  Field,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Input,
-  Link,
-  Stack,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import { PasswordInput } from "@/components/ui/password-input";
+import { Button, Field, Flex, Grid, Input, Link, Text } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 
 export default function POSLoginPage() {
