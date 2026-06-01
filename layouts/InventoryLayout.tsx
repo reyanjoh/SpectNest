@@ -18,7 +18,7 @@ export const InventoryLayout = ({ children }: Props) => {
         position={"relative"}
       >
         <TopBar />
-        <Flex direction={"column"} px={2} pt={"1.5rem"} pb={"2"} gap={1}>
+        <Flex direction={"column"} px={2} pt={"1.5rem"} pb={"2"} gap={1.5}>
           {children}
         </Flex>
       </Flex>

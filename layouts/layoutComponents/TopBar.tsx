@@ -16,7 +16,14 @@ const TopBar = () => {
     >
       <Flex position={"relative"}>
         <Input w={"20rem"} placeholder="Search" borderColor="bgGray" />
-        <Button position={"absolute"} left={"2px"} top={"2px"} p={0} h={"90%"}>
+        <Button
+          variant={"ghost"}
+          position={"absolute"}
+          left={"2px"}
+          top={"2px"}
+          p={0}
+          h={"90%"}
+        >
           <SearchIcon />
         </Button>
       </Flex>
