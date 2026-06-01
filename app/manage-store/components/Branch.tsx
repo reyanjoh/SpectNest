@@ -45,21 +45,8 @@ export const Branch = (props: Props) => {
         </Flex>
       </Flex>
       <Flex p={1} gap={1}>
+        <Button variant={"outline"}>Edit</Button>
         <Button
-          color="brand"
-          borderColor="bgGray"
-          _hover={{ color: "white", bg: "brand" }}
-          px={2}
-          fontWeight={"medium"}
-        >
-          Edit
-        </Button>
-        <Button
-          color="white"
-          bg="brand"
-          _hover={{ color: "brand", bg: "white", borderColor: "brand" }}
-          px={2}
-          fontWeight={"medium"}
           onClick={() =>
             router.push(
               `/manage-store/${props.branchName?.replaceAll(" ", "-")}`,
