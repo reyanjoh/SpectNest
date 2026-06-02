@@ -10,6 +10,7 @@ import {
   FileUpload,
 } from "@chakra-ui/react";
 import { EmptyProfileIcon } from "@/components/icons/EmptyProfileIcon";
+import { HiUpload } from "react-icons/hi";
 
 const MAX_FILE_SIZE = 200 * 1024;
 const MAX_DIMENSION = 512;
@@ -151,6 +152,18 @@ export const NewEmployeeModal = () => {
                   </Grid>
                 ),
               )}
+              <Grid templateColumns={"1fr 2fr"} alignItems={"center"}>
+                <Text fontSize="sm">Resume Copy</Text>
+                <FileUpload.Root gap={1}>
+                  <FileUpload.HiddenInput />
+                  <FileUpload.Trigger asChild>
+                    <Button variant="outline" size="sm">
+                      <HiUpload /> Upload file
+                    </Button>
+                  </FileUpload.Trigger>
+                  <FileUpload.List />
+                </FileUpload.Root>
+              </Grid>
             </Dialog.Body>
             <Dialog.Footer>
               <Dialog.ActionTrigger asChild>
