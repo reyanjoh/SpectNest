@@ -1,5 +1,6 @@
 import { buttonRecipe } from "./buttons";
 import { dialogSlotRecipe } from "./dialog";
+import { fileUploadSlotRecipe } from "./fileUpload";
 import { inputRecipe } from "./Input";
 
 export const recipes = {
@@ -9,4 +10,5 @@ export const recipes = {
 
 export const slotRecipes = {
   dialog: dialogSlotRecipe,
+  fileUpload: fileUploadSlotRecipe,
 };
