@@ -15,7 +15,7 @@ const TopBar = () => {
       top={"0"}
     >
       <Flex position={"relative"}>
-        <Input w={"20rem"} placeholder="Search" borderColor="bgGray" />
+        <Input w={"20rem"} placeholder="Search" borderColor="bgGray" pl={2.5} />
         <Button
           variant={"ghost"}
           position={"absolute"}
