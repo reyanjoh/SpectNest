@@ -3,11 +3,8 @@ import React from "react";
 
 type Props = FlexProps & {
   children: React.ReactNode;
-  gap?: string;
-  w?: string;
   bg?: string;
   borderRadius?: string;
-  p?: string;
   flexDirection?: string;
 };
 
