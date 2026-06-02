@@ -1,17 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { Logo } from "@/components/icons/Logo";
 import { PowerIcon } from "@/components/icons/PowerIcon";
 import { SettingsIcon } from "@/components/icons/SettingsIcon";
 import { getSideNav } from "@/utils/navigation/getSideNav";
-import { MenuIcon } from "@/components/icons/MenuIcon";
-import { HomeIcon } from "@/components/icons/HomeIcon";
-import { InventoryIcon } from "@/components/icons/InventoryIcon";
-import { ReportsIcon } from "@/components/icons/ReportsIcon";
-import { EmployeesIcon } from "@/components/icons/EmployeesIcon";
-import { ManageStoreIcon } from "@/components/icons/ManageStoreIcon";
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
