@@ -3,11 +3,11 @@ export const colors = {
   brandVariant: {
     1: { value: "#009ED8" },
   },
-  gray: {
-    border: { value: "#D0D5DD" },
-    bg: { value: "#EFEFEF" },
-  },
+
   bgGray: { value: "#EFEFEF" },
+  borderGray: {
+    1: { value: "#D0D5DD" },
+  },
   fontGray: {
     1: { value: "#667085" },
     2: { value: "#858D9D" },
