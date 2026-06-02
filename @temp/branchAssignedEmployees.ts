@@ -5,6 +5,8 @@ export const branchAssignedEmployees = [
     lastName: "Dela Cruz",
     phoneNumber: "09171234567",
     position: "Store Manager",
+    branchAssigned: "Main Branch",
+    employeeStatus: "Active",
   },
   {
     id: 2,
@@ -12,6 +14,8 @@ export const branchAssignedEmployees = [
     lastName: "Santos",
     phoneNumber: "09181234567",
     position: "Cashier",
+    branchAssigned: "Main Branch",
+    employeeStatus: "Absent",
   },
   {
     id: 3,
@@ -19,6 +23,8 @@ export const branchAssignedEmployees = [
     lastName: "Reyes",
     phoneNumber: "09191234567",
     position: "Inventory Clerk",
+    branchAssigned: "Branch 2",
+    employeeStatus: "Suspended",
   },
   {
     id: 4,
@@ -26,6 +32,8 @@ export const branchAssignedEmployees = [
     lastName: "Garcia",
     phoneNumber: "09201234567",
     position: "Sales Associate",
+    branchAssigned: "Branch 3",
+    employeeStatus: "Inactive",
   },
   {
     id: 5,
@@ -33,6 +41,8 @@ export const branchAssignedEmployees = [
     lastName: "Torres",
     phoneNumber: "09211234567",
     position: "Warehouse Staff",
+    branchAssigned: "Branch 2",
+    employeeStatus: "Absent",
   },
   {
     id: 6,
@@ -40,6 +50,8 @@ export const branchAssignedEmployees = [
     lastName: "Mendoza",
     phoneNumber: "09221234567",
     position: "Accountant",
+    branchAssigned: "Main Branch",
+    employeeStatus: "Active",
   },
   {
     id: 7,
@@ -47,6 +59,8 @@ export const branchAssignedEmployees = [
     lastName: "Fernandez",
     phoneNumber: "09231234567",
     position: "Supervisor",
+    branchAssigned: "Branch 3",
+    employeeStatus: "Active",
   },
   {
     id: 8,
@@ -54,6 +68,8 @@ export const branchAssignedEmployees = [
     lastName: "Lopez",
     phoneNumber: "09241234567",
     position: "Customer Service Representative",
+    branchAssigned: "Branch 2",
+    employeeStatus: "Suspended",
   },
   {
     id: 9,
@@ -61,6 +77,8 @@ export const branchAssignedEmployees = [
     lastName: "Castillo",
     phoneNumber: "09251234567",
     position: "Delivery Driver",
+    branchAssigned: "Main Branch",
+    employeeStatus: "Active",
   },
   {
     id: 10,
@@ -68,5 +86,7 @@ export const branchAssignedEmployees = [
     lastName: "Villanueva",
     phoneNumber: "09261234567",
     position: "HR Assistant",
+    branchAssigned: "Branch 3",
+    employeeStatus: "Absent",
   },
 ];
