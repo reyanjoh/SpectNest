@@ -83,19 +83,19 @@ const page = () => {
             </Text>
           </Grid>
           <Grid templateRows={"repeat(2, auto)"} gap={1} px={4} bg="white">
-            <Text color={"orange"}>Full Time</Text>
+            <Text color={"orange"}>Total Items Sold</Text>
             <Text fontWeight={"semibold"} fontSize="sm" color="fontGray.2">
               591
             </Text>
           </Grid>
           <Grid templateRows={"repeat(2, auto)"} gap={1} px={4} bg="white">
-            <Text color={"purple"}>Full Time</Text>
+            <Text color={"purple"}>Total Incentives</Text>
             <Text fontWeight={"semibold"} fontSize="sm" color="fontGray.2">
               ₱ 2,500
             </Text>
           </Grid>
           <Grid templateRows={"repeat(2, auto)"} gap={1} px={4} bg="white">
-            <Text color={"red"}>Full Time</Text>
+            <Text color={"red"}>Total Income</Text>
             <Text fontWeight={"semibold"} fontSize="sm" color="fontGray.2">
               ₱ 2,500
             </Text>
