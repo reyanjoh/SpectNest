@@ -18,7 +18,7 @@ export const SideNav = () => {
   const params = useParams();
   const pathname = usePathname();
 
-  const sideNav = getSideNav(params.employeeId as string);
+  const sideNav = getSideNav();
 
   const { total } = useCartStore((state) => state.receipt);
   console.log(total);
