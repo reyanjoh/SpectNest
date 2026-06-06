@@ -7,6 +7,7 @@ export const products: ProductType[] = [
     size: "6 inch",
     price: 850,
     imageUrl: "/images/products/black forest.jpg",
+    quantity: 10,
   },
   {
     id: "2",
@@ -14,6 +15,7 @@ export const products: ProductType[] = [
     size: "8 inch",
     price: 1200,
     imageUrl: "/images/products/brigadeiro.jpg",
+    quantity: 0,
   },
   {
     id: "3",
@@ -22,6 +24,7 @@ export const products: ProductType[] = [
     price: 1500,
     imageUrl:
       "/images/products/custom fathers day cake w fresh fruit toppings.jpg",
+    quantity: 3,
   },
   {
     id: "4",
@@ -29,6 +32,7 @@ export const products: ProductType[] = [
     size: "6 inch",
     price: 900,
     imageUrl: "/images/products/mangoGrahamFloat.jpg",
+    quantity: 25,
   },
   {
     id: "5",
@@ -36,6 +40,7 @@ export const products: ProductType[] = [
     size: "8 inch",
     price: 1300,
     imageUrl: "/images/products/original red velvet cake.jpg",
+    quantity: 30,
   },
   {
     id: "6",
@@ -43,6 +48,7 @@ export const products: ProductType[] = [
     size: "10 inch",
     price: 1600,
     imageUrl: "/images/products/red velvet cake.jpg",
+    quantity: 35,
   },
   {
     id: "7",
@@ -50,6 +56,7 @@ export const products: ProductType[] = [
     size: "6 inch",
     price: 950,
     imageUrl: "/images/products/ube cake.jpg",
+    quantity: 40,
   },
   {
     id: "8",
@@ -57,6 +64,7 @@ export const products: ProductType[] = [
     size: "8 inch",
     price: 1100,
     imageUrl: "/images/products/yema cake.jpg",
+    quantity: 45,
   },
   {
     id: "9",
@@ -64,6 +72,7 @@ export const products: ProductType[] = [
     size: "10 inch",
     price: 1400,
     imageUrl: "/images/products/yema ube cake.jpg",
+    quantity: 50,
   },
   {
     id: "10",
@@ -71,5 +80,87 @@ export const products: ProductType[] = [
     size: "6 inch",
     price: 1250,
     imageUrl: "/images/products/brigadeiro.jpg",
+    quantity: 55,
+  },
+  {
+    id: "11",
+    name: "Chocolate Cake",
+    size: "6 inch",
+    price: 850,
+    imageUrl: "/images/products/black forest.jpg",
+    quantity: 10,
+  },
+  {
+    id: "12",
+    name: "Vanilla Cake",
+    size: "8 inch",
+    price: 1200,
+    imageUrl: "/images/products/brigadeiro.jpg",
+    quantity: 0,
+  },
+  {
+    id: "13",
+    name: "Red Velvet Cake",
+    size: "10 inch",
+    price: 1500,
+    imageUrl:
+      "/images/products/custom fathers day cake w fresh fruit toppings.jpg",
+    quantity: 3,
+  },
+  {
+    id: "14",
+    name: "Strawberry Cake",
+    size: "6 inch",
+    price: 900,
+    imageUrl: "/images/products/mangoGrahamFloat.jpg",
+    quantity: 25,
+  },
+  {
+    id: "15",
+    name: "Black Forest Cake",
+    size: "8 inch",
+    price: 1300,
+    imageUrl: "/images/products/original red velvet cake.jpg",
+    quantity: 30,
+  },
+  {
+    id: "16",
+    name: "Mango Cake",
+    size: "10 inch",
+    price: 1600,
+    imageUrl: "/images/products/red velvet cake.jpg",
+    quantity: 35,
+  },
+  {
+    id: "17",
+    name: "Ube Cake",
+    size: "6 inch",
+    price: 950,
+    imageUrl: "/images/products/ube cake.jpg",
+    quantity: 40,
+  },
+  {
+    id: "18",
+    name: "Carrot Cake",
+    size: "8 inch",
+    price: 1100,
+    imageUrl: "/images/products/yema cake.jpg",
+    quantity: 45,
+  },
+  {
+    id: "19",
+    name: "Mocha Cake",
+    size: "10 inch",
+    price: 1400,
+    imageUrl: "/images/products/yema ube cake.jpg",
+    quantity: 50,
+  },
+  {
+    id: "20",
+    name: "Cheesecake",
+    size: "6 inch",
+    price: 1250,
+    imageUrl: "/images/products/brigadeiro.jpg",
+    quantity: 55,
   },
 ];

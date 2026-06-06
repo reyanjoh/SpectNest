@@ -10,6 +10,7 @@ import { MenuIcon } from "@/components/icons/MenuIcon";
 import { HomeIcon } from "@/components/icons/HomeIcon";
 import { TagsIcon } from "@/components/icons/TagsIcon";
 import { CartIcon } from "@/components/icons/CartIcon";
+import { InventoryIcon } from "@/components/icons/InventoryIcon";
 import { ChatIcon } from "@/components/icons/ChatIcon";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -91,6 +92,10 @@ export const SideNavBar = () => {
               ) : item.icon === "ChatIcon" ? (
                 <Link href={item.path}>
                   <ChatIcon active={pathname === item.path} />
+                </Link>
+              ) : item.icon === "InventoryIcon" ? (
+                <Link href={item.path}>
+                  <InventoryIcon active={pathname === item.path} />
                 </Link>
               ) : null}
             </Box>

@@ -2,7 +2,7 @@ import { POSLayout } from "@/layouts/POSLayout";
 import React from "react";
 import { Flex, Grid } from "@chakra-ui/react";
 
-import { ProductsHeader } from "./ProductsHeader";
+import { ProductsHeader } from "@/components/ProductsHeader";
 import { ProductCard } from "./ProductCard";
 import { products } from "@/@temp/products";
 import { Cart } from "@/components/Cart";
