@@ -5,18 +5,18 @@ import { ReportsIcon } from "@/components/icons/ReportsIcon";
 import { EmployeesIcon } from "@/components/icons/EmployeesIcon";
 import { ManageStoreIcon } from "@/components/icons/ManageStoreIcon";
 
-export function getSideNav(employeeId: string) {
+export function getSideNav() {
   return [
     {
       id: 1,
       name: "Dashboard",
-      path: `/home`,
+      path: `/dashboard`,
       icon: HomeIcon,
     },
     {
       id: 2,
       name: "Products",
-      path: `/Products`,
+      path: `/products`,
       icon: MenuIcon,
     },
     {
