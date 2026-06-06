@@ -8,6 +8,7 @@ export const products: ProductType[] = [
     price: 850,
     imageUrl: "/images/products/black forest.jpg",
     quantity: 10,
+    lastModified: "2026-06-06T08:30:00Z",
   },
   {
     id: "2",
@@ -16,6 +17,7 @@ export const products: ProductType[] = [
     price: 1200,
     imageUrl: "/images/products/brigadeiro.jpg",
     quantity: 0,
+    lastModified: "2026-06-05T14:20:00Z",
   },
   {
     id: "3",
@@ -25,6 +27,7 @@ export const products: ProductType[] = [
     imageUrl:
       "/images/products/custom fathers day cake w fresh fruit toppings.jpg",
     quantity: 3,
+    lastModified: "2026-06-06T10:15:00Z",
   },
   {
     id: "4",
@@ -33,6 +36,7 @@ export const products: ProductType[] = [
     price: 900,
     imageUrl: "/images/products/mangoGrahamFloat.jpg",
     quantity: 25,
+    lastModified: "2026-06-04T09:45:00Z",
   },
   {
     id: "5",
@@ -41,6 +45,7 @@ export const products: ProductType[] = [
     price: 1300,
     imageUrl: "/images/products/original red velvet cake.jpg",
     quantity: 30,
+    lastModified: "2026-06-06T11:00:00Z",
   },
   {
     id: "6",
@@ -49,6 +54,7 @@ export const products: ProductType[] = [
     price: 1600,
     imageUrl: "/images/products/red velvet cake.jpg",
     quantity: 35,
+    lastModified: "2026-06-03T16:30:00Z",
   },
   {
     id: "7",
@@ -57,6 +63,7 @@ export const products: ProductType[] = [
     price: 950,
     imageUrl: "/images/products/ube cake.jpg",
     quantity: 40,
+    lastModified: "2026-06-06T07:20:00Z",
   },
   {
     id: "8",
@@ -65,6 +72,7 @@ export const products: ProductType[] = [
     price: 1100,
     imageUrl: "/images/products/yema cake.jpg",
     quantity: 45,
+    lastModified: "2026-06-02T13:10:00Z",
   },
   {
     id: "9",
@@ -73,6 +81,7 @@ export const products: ProductType[] = [
     price: 1400,
     imageUrl: "/images/products/yema ube cake.jpg",
     quantity: 50,
+    lastModified: "2026-06-06T09:00:00Z",
   },
   {
     id: "10",
@@ -81,6 +90,7 @@ export const products: ProductType[] = [
     price: 1250,
     imageUrl: "/images/products/brigadeiro.jpg",
     quantity: 55,
+    lastModified: "2026-06-01T18:40:00Z",
   },
   {
     id: "11",
@@ -89,6 +99,7 @@ export const products: ProductType[] = [
     price: 850,
     imageUrl: "/images/products/black forest.jpg",
     quantity: 10,
+    lastModified: "2026-06-06T08:30:00Z",
   },
   {
     id: "12",
@@ -97,6 +108,7 @@ export const products: ProductType[] = [
     price: 1200,
     imageUrl: "/images/products/brigadeiro.jpg",
     quantity: 0,
+    lastModified: "2026-06-05T14:20:00Z",
   },
   {
     id: "13",
@@ -106,6 +118,7 @@ export const products: ProductType[] = [
     imageUrl:
       "/images/products/custom fathers day cake w fresh fruit toppings.jpg",
     quantity: 3,
+    lastModified: "2026-06-06T10:15:00Z",
   },
   {
     id: "14",
@@ -114,6 +127,7 @@ export const products: ProductType[] = [
     price: 900,
     imageUrl: "/images/products/mangoGrahamFloat.jpg",
     quantity: 25,
+    lastModified: "2026-06-04T09:45:00Z",
   },
   {
     id: "15",
@@ -122,6 +136,7 @@ export const products: ProductType[] = [
     price: 1300,
     imageUrl: "/images/products/original red velvet cake.jpg",
     quantity: 30,
+    lastModified: "2026-06-06T11:00:00Z",
   },
   {
     id: "16",
@@ -130,6 +145,7 @@ export const products: ProductType[] = [
     price: 1600,
     imageUrl: "/images/products/red velvet cake.jpg",
     quantity: 35,
+    lastModified: "2026-06-03T16:30:00Z",
   },
   {
     id: "17",
@@ -138,6 +154,7 @@ export const products: ProductType[] = [
     price: 950,
     imageUrl: "/images/products/ube cake.jpg",
     quantity: 40,
+    lastModified: "2026-06-06T07:20:00Z",
   },
   {
     id: "18",
@@ -146,6 +163,7 @@ export const products: ProductType[] = [
     price: 1100,
     imageUrl: "/images/products/yema cake.jpg",
     quantity: 45,
+    lastModified: "2026-06-02T13:10:00Z",
   },
   {
     id: "19",
@@ -154,6 +172,7 @@ export const products: ProductType[] = [
     price: 1400,
     imageUrl: "/images/products/yema ube cake.jpg",
     quantity: 50,
+    lastModified: "2026-06-06T09:00:00Z",
   },
   {
     id: "20",
@@ -162,5 +181,6 @@ export const products: ProductType[] = [
     price: 1250,
     imageUrl: "/images/products/brigadeiro.jpg",
     quantity: 55,
+    lastModified: "2026-06-01T18:40:00Z",
   },
 ];
