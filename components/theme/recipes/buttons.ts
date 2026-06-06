@@ -117,11 +117,15 @@ export const buttonRecipe = defineRecipe({
         p: 0,
       },
       solid: {
-        bg: "colorPalette.solid",
-        color: "colorPalette.contrast",
+        bg: "brand",
+        color: "white",
         borderColor: "transparent",
+        padding: "0.5rem 1rem",
         _hover: {
-          bg: "colorPalette.solid/90",
+          bg: "white",
+          color: "brand",
+          border: "1px solid",
+          borderColor: "brand",
         },
         _expanded: {
           bg: "colorPalette.solid/90",
@@ -152,10 +156,12 @@ export const buttonRecipe = defineRecipe({
       },
       outline: {
         borderWidth: "1px",
-        borderColor: "colorPalette.muted",
-        color: "colorPalette.fg",
+        borderColor: "bgGray",
+        padding: "0.5rem 1rem",
+        color: "fontGray.1",
         _hover: {
-          bg: "colorPalette.subtle",
+          bg: "bgGray",
+          // color: " white",
         },
         _expanded: {
           bg: "colorPalette.subtle",
@@ -164,8 +170,13 @@ export const buttonRecipe = defineRecipe({
       ghost: {
         bg: "transparent",
         color: "colorPalette.fg",
+        height: "auto",
+        width: "auto",
+        padding: "0",
+        margin: "0",
+        border: "none",
         _hover: {
-          bg: "colorPalette.subtle",
+          bg: "transparent",
         },
         _expanded: {
           bg: "colorPalette.subtle",

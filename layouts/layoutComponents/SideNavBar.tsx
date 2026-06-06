@@ -5,7 +5,7 @@ import { Box, Flex } from "@chakra-ui/react";
 import { Logo } from "@/components/icons/Logo";
 import { PowerIcon } from "@/components/icons/PowerIcon";
 import { SettingsIcon } from "@/components/icons/SettingsIcon";
-import { getSideNav } from "@/utils/navigation/getSideNav";
+import { getOldSideNav } from "@/utils/navigation/getOldSideNav";
 import { MenuIcon } from "@/components/icons/MenuIcon";
 import { HomeIcon } from "@/components/icons/HomeIcon";
 import { TagsIcon } from "@/components/icons/TagsIcon";
@@ -23,7 +23,7 @@ export const SideNavBar = () => {
   const params = useParams();
   const pathname = usePathname();
 
-  const sideNav = getSideNav(params.employeeId as string);
+  const sideNav = getOldSideNav(params.employeeId as string);
 
   const { total } = useCartStore((state) => state.receipt);
   console.log(total);

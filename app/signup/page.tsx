@@ -1,16 +1,7 @@
 "use client";
 
 import { Logo } from "@/components/icons/Logo";
-import {
-  Button,
-  Checkbox,
-  Field,
-  Flex,
-  Grid,
-  Input,
-  Link,
-  Text,
-} from "@chakra-ui/react";
+import { Button, Field, Flex, Grid, Input, Link, Text } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 
 export default function POSLoginPage() {
@@ -49,9 +40,9 @@ export default function POSLoginPage() {
             mt={1}
             gap={1}
           >
-            <Text fontSize="3xl">Log in to your account</Text>
+            <Text fontSize="3xl">Create an account</Text>
             <Text color="fontGray.1" fontSize="sm">
-              Welcome back! Please enter your details.
+              Welcome!
             </Text>
           </Flex>
           <Flex
@@ -62,6 +53,26 @@ export default function POSLoginPage() {
           >
             <Field.Root required gap={0.5}>
               <Field.Label color="fontGray.1" fontSize="sm">
+                First Name <Field.RequiredIndicator />
+              </Field.Label>
+              <Input
+                px={1}
+                borderColor="gray.300"
+                placeholder="Enter your first name"
+              />
+            </Field.Root>
+            <Field.Root required gap={0.5}>
+              <Field.Label color="fontGray.1" fontSize="sm">
+                Last Name <Field.RequiredIndicator />
+              </Field.Label>
+              <Input
+                px={1}
+                borderColor="gray.300"
+                placeholder="Enter your last name"
+              />
+            </Field.Root>
+            <Field.Root required gap={0.5}>
+              <Field.Label color="fontGray.1" fontSize="sm">
                 Email <Field.RequiredIndicator />
               </Field.Label>
               <Input
@@ -70,43 +81,35 @@ export default function POSLoginPage() {
                 placeholder="Enter your email"
               />
             </Field.Root>
+
             <Field.Root required gap={0.5}>
               <Field.Label color="fontGray.1" fontSize="sm">
-                Password <Field.RequiredIndicator />
+                Create Password <Field.RequiredIndicator />
               </Field.Label>
               <Input
                 px={1}
                 type="password"
                 borderColor="gray.300"
-                placeholder="• • • • • • • •"
+                placeholder="Create Password"
               />
+              <Field.HelperText>
+                Must be at least 8 characters.
+              </Field.HelperText>
             </Field.Root>
-            <Flex>
-              <Checkbox.Root colorPalette={"gray"} gap={1}>
-                <Checkbox.HiddenInput />
-                <Checkbox.Control />
-                <Checkbox.Label color="fontGray.1" fontSize="sm">
-                  Remember for 30 days
-                </Checkbox.Label>
-              </Checkbox.Root>
-              <Link ml="auto" color="brand" fontSize="sm">
-                Forgot password?
-              </Link>
-            </Flex>
             <Button
               mt={1}
               bg="brand"
               color="white"
-              onClick={() => router.push("/1123/menu")}
+              onClick={() => router.push("/employee/1/inventory")}
             >
-              Sign in
+              Get started
             </Button>
             <Flex justifyContent="center" alignItems="center" mt={1} gap={1}>
               <Text fontSize="sm" color="fontGray.1">
-                Don't have an account?
+                Already have an account?
               </Text>
-              <Link color="brand" fontSize="sm" href="/signup">
-                Sign up
+              <Link color="brand" fontSize="sm" href="/login">
+                Log in
               </Link>
             </Flex>
           </Flex>

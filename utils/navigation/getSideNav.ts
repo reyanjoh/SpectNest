@@ -1,40 +1,47 @@
-export function getSideNav(employeeId: string) {
+import { MenuIcon } from "@/components/icons/MenuIcon";
+import { HomeIcon } from "@/components/icons/HomeIcon";
+import { InventoryIcon } from "@/components/icons/InventoryIcon";
+import { ReportsIcon } from "@/components/icons/ReportsIcon";
+import { EmployeesIcon } from "@/components/icons/EmployeesIcon";
+import { ManageStoreIcon } from "@/components/icons/ManageStoreIcon";
+
+export function getSideNav() {
   return [
     {
       id: 1,
-      name: "Home",
-      path: `/${employeeId}/home`,
-      icon: "HomeIcon",
+      name: "Dashboard",
+      path: `/dashboard`,
+      icon: HomeIcon,
     },
     {
       id: 2,
-      name: "Menu",
-      path: `/${employeeId}/menu`,
-      icon: "MenuIcon",
+      name: "Products",
+      path: `/products`,
+      icon: MenuIcon,
     },
     {
       id: 3,
-      name: "Saved Items",
-      path: `/${employeeId}/saved-items`,
-      icon: "TagsIcon",
+      name: "Inventory",
+      path: `/inventory`,
+      icon: InventoryIcon,
     },
     {
       id: 4,
-      name: "Checkout",
-      path: `/${employeeId}/checkout`,
-      icon: "CartIcon",
+      name: "Reports",
+      path: `/reports`,
+      icon: ReportsIcon,
     },
-    // {
-    //   id: 5,
-    //   name: "Chat",
-    //   path: `/${employeeId}/chat`,
-    //   icon: "ChatIcon",
-    // },
+    {
+      id: 5,
+      name: "Employees",
+      path: `/employees`,
+      icon: EmployeesIcon,
+    },
     {
       id: 6,
-      name: "Inventory",
-      path: `/${employeeId}/inventory`,
-      icon: "InventoryIcon",
+      name: "Manage Store",
+      path: `/manage-store`,
+      icon: ManageStoreIcon,
     },
   ];
 }
