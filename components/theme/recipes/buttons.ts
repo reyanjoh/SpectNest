@@ -169,7 +169,7 @@ export const buttonRecipe = defineRecipe({
       },
       ghost: {
         bg: "transparent",
-        color: "colorPalette.fg",
+        color: "fontGray.1",
         height: "auto",
         width: "auto",
         padding: "0",
@@ -178,6 +178,7 @@ export const buttonRecipe = defineRecipe({
         _hover: {
           bg: "transparent",
         },
+        fontSize: "16px",
         _expanded: {
           bg: "colorPalette.subtle",
         },
